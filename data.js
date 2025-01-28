@@ -18,7 +18,7 @@ E: N/A
 //////////////////////////////////////////////////////////////////////
 
 // Create an empty array for your for your animal
-var animal = {}
+var animal = {};
 
 // With dot notation give the animal a species
 animal.species = 'bird';
@@ -45,7 +45,7 @@ var noises = [];
 noises[0] = 'chirp';
 
 // Add a noise using .push() method
-noises.push('squawk')
+noises.push('squawk');
 
 // Add a noise to the front using the .unshift() method
 noises.unshift('whistle');
@@ -100,13 +100,82 @@ console.log(animal);
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// Create a variable named animals assigned to an empty array
+var animals = []
 
+// Push our animal created to anumals
+var bird = {
+  species: 'bird',
+  name: 'Sam',
+  noises: ['whistle', 'chirp', 'squawk', 'sing']
+};
+
+// Push bird into animals then loog
+animals.push(bird);
+console.log(bird);
+
+// Create a variabdle caled duck and assign it the given data
+
+var duck = {
+  species: 'duck',
+  name: 'Jerome',
+  noises: ['quack', 'honk', 'sneeze', 'woosh']
+};
+
+
+// Push duck to animals and log
+animals.push(duck);
+console.log(duck);
+
+
+// First additional animal object
+var bear = {
+  species: 'bear',
+  name: 'Winnie',
+  noises: ['roar', 'growl']
+};
+
+// Create second additional animal object
+var cat = {
+  species: 'cat',
+  name: 'Garfield',
+  noises: ['meow', 'purr']
+};
+
+// Push both animals to the animals array then log
+animals.push(bear);
+animals.push(cat);
+
+console.log(animals);
+console.log(animals.length);
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// Initialize empty array for the friends
+var friends = [];
 
+// Function created to get random animal index
+function getRandom(animals) {
+  var randomIndex = Math.floor(Math.random() * animals.length);
+  return randomIndex;
+};
+
+var randomIndex = getRandom(animals);  // Get a random index
+var randomAnimal = animals[randomIndex];  // Get the animal at the random index
+
+// Add the random animal's name to the friends array
+friends.push(randomAnimal.name);  // Add the random animal's name to the list of friends
+
+// Log the friends list
+console.log(friends);  // This should show the name of the random animal added to the friends list
+
+// Add the friends list to the first animal in the animals array
+animals[0]['friends'] = friends;  // Add the friends list as a property to the first animal (bird)
+
+// Log the animals array to see the updated information
+console.log(animals);
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
