@@ -13,12 +13,35 @@
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function search(animals, name) {
+    // Loop through the animals array
+    for (let i = 0; i < animals.length; i++) {
+      // Check if the current animals name matches the search string
+      if (animals[i].name === name) {
+        return animals[i];  // Return the animal object if found
+      }
+    }
+    // If no match is found, return null
+    return null;
+  }
+  
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+function replace(animals, name, replacement) {
+    // Loop through the animals array
+    for (let i = 0; i < animals.length; i++) {
+      // Check if the current animal's name matches the search name
+      if (animals[i].name === name) {
+        animals[i] = replacement;  // Replace the animal's object with the replacement
+        return;  // Exit the function once the replacement is made
+      }
+    }
+    // If no animal is found, do nothing (no need to return anything)
+  }
+  
 
 
 //////////////////////////////////////////////////////////////////////
